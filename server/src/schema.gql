@@ -1,0 +1,40 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  _id: String!
+  name: String!
+  email: String!
+  gender: String!
+  address: String!
+}
+
+type Query {
+  getHello: String!
+  users: [User!]!
+
+  """Find user using their id"""
+  userByID(id: String!): User!
+}
+
+type Mutation {
+  createuser(createuserInput: CreateuserInput!): User!
+  updateuser(updateuserInput: UpdateuserInput!, id: String!): User!
+  deleteuser(id: String!): User!
+}
+
+input CreateuserInput {
+  name: String!
+  email: String!
+  gender: String!
+  address: String!
+}
+
+input UpdateuserInput {
+  name: String
+  email: String
+  gender: String
+  address: String
+  _id: String!
+}
